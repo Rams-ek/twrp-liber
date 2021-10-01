@@ -11,6 +11,7 @@
 /misc            emmc       /dev/block/bootdevice/by-name/misc
 /efs1            emmc       /dev/block/bootdevice/by-name/modemst1                flags=backup=1;display="EFS"
 /efs2            emmc       /dev/block/bootdevice/by-name/modemst2                flags=backup=1;subpartitionof=/efs1
+
 # Persist
 /persist         ext4       /dev/block/bootdevice/by-name/persist                 flags=backup=1;display="Persist"
 /prodpersist     ext4       /dev/block/bootdevice/by-name/prodpersist             flags=backup=1;display="Product Persist"
@@ -33,3 +34,8 @@
 system           ext4       /system                                               display="System"
 vendor           ext4       /vendor                                               display="Vendor"
 product          ext4       /product                                              display="Product"
+
+# Flashable logical partitions
+/system_image    emmc       /dev/block/bootdevice/by-name/system                  flags=backup=1;display="System Image";flashimg=1
+/vendor_image    emmc       /dev/block/bootdevice/by-name/vendor                  flags=backup=1;display="Vendor Image";flashimg=1
+/product_image   emmc       /dev/block/bootdevice/by-name/product                 flags=backup=1;display="Product Image";flashimg=1
