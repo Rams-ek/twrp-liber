@@ -94,3 +94,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
+
+# libhidlbase
+PRODUCT_COPY_FILES += \
+    device/motorola/liber/recovery/root/system/lib64/libhidlbase.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libhidlbase.so
